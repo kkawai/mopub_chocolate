@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/request1"
+            style="@style/ButtonStyle"
+            android:onClick="onButtonClicked"
+            android:text="PRESS ME"/>
+
+        <Button
+            android:id="@+id/request2"
+            style="@style/ButtonStyle"
+            android:onClick="onButtonClicked"
+            android:text="PRESS ME"/>
+
+        <Button
+            android:id="@+id/request3"
+            style="@style/ButtonStyle"
+            android:onClick="onButtonClicked"
+            android:text="PRESS ME"/>
+
+        <Button
+            android:id="@+id/request4"
+            style="@style/ButtonStyle"
+            android:onClick="onButtonClicked"
+            android:text="PRESS ME"/>
+
+        <Button
+            android:id="@+id/request5"
+            style="@style/ButtonStyle"
+            android:onClick="onButtonClicked"
+            android:text="PRESS ME"/>
+
+    </LinearLayout>
+</layout>
