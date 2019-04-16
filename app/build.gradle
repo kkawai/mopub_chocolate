@@ -51,7 +51,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //CHOCOLATE MEDIATION ADAPTERS
-    implementation 'com.vdopia.ads.lw:coresdk-beta:2.8.3-vpaid-beta'
+    implementation 'com.vdopia.ads.lw:coresdk-beta:2.8.4-vpaid-beta'
     implementation 'com.vdopia.ads.lw:adcolony-adapter:1.2.0'
     implementation 'com.vdopia.ads.lw:amazon-adapter:1.0.2'
     implementation 'com.vdopia.ads.lw:applovin-adapter:1.1.2'
@@ -60,11 +60,7 @@ dependencies {
     implementation 'com.vdopia.ads.lw:google-adapter:1.1.7'
     implementation 'com.vdopia.ads.lw:inmobi-adapter:1.1.2'
     implementation 'com.vdopia.ads.lw:mopub-adapter:1.2.0'
-    implementation ('com.vdopia.ads.lw:tapjoy-adapter:1.0.6') {
-        exclude group: 'com.tapjoy'
-        exclude group: 'com.moat'
-        exclude group: 'js'
-    }
+    implementation 'com.vdopia.ads.lw:tapjoy-adapter:1.0.7'
     implementation 'com.vdopia.ads.lw:unity-adapter:1.2.0'
     implementation 'com.vdopia.ads.lw:vungle-adapter:1.0.8'
     implementation 'com.vdopia.ads.lw:yahoo-adapter:1.0.8'
