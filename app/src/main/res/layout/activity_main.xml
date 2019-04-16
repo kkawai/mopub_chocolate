@@ -13,31 +13,31 @@
             android:id="@+id/request1"
             style="@style/ButtonStyle"
             android:onClick="onButtonClicked"
-            android:text="PRESS ME"/>
+            android:text="Chocolate Rewarded Video Ad"/>
 
         <Button
             android:id="@+id/request2"
             style="@style/ButtonStyle"
             android:onClick="onButtonClicked"
-            android:text="PRESS ME"/>
+            android:text="Chocolate Inview Ad"/>
 
         <Button
             android:id="@+id/request3"
             style="@style/ButtonStyle"
             android:onClick="onButtonClicked"
-            android:text="PRESS ME"/>
+            android:text="Mopub Rewarded Video Ad"/>
 
         <Button
             android:id="@+id/request4"
             style="@style/ButtonStyle"
             android:onClick="onButtonClicked"
-            android:text="PRESS ME"/>
+            android:text="Mopub Inview Ad"/>
 
-        <Button
-            android:id="@+id/request5"
-            style="@style/ButtonStyle"
-            android:onClick="onButtonClicked"
-            android:text="PRESS ME"/>
+        <ViewGroup
+            android:id="@+id/inview"
+            android:layout_width="@dimen/inview_width"
+            android:layout_height="@dimen/inview_height"
+            />
 
     </LinearLayout>
 </layout>
