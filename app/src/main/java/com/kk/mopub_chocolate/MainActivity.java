@@ -1,8 +1,8 @@
 package com.kk.mopub_chocolate;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
 import com.kk.mopub_chocolate.databinding.ActivityMainBinding;
@@ -11,19 +11,19 @@ import com.mopub.common.SdkConfiguration;
 import com.mopub.common.SdkInitializationListener;
 import com.vdopia.ads.lw.Chocolate;
 import com.vdopia.ads.lw.InitCallback;
-import com.vdopia.ads.lw.LVDORewardedAd;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TAG = "MainActivity";
+    private static final String TAG = "MainActivity";
 
-    ActivityMainBinding binding;
+    private ActivityMainBinding binding;
+    private MopubAds mopubAds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        mopubAds = new MopubAds(this, binding.log);
         Chocolate.enableChocolateTestAds(true);
         Chocolate.init(this, Config.CHOCOLATE_API_KEY, new InitCallback() {
             @Override
@@ -54,6 +54,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonClicked(View view) {
-        Log.d(TAG,"onClick " + (view.getId() == R.id.request1 ));
+        switch (view.getId()) {
+            case R.id.load_chocolate_rewarded:
+
+                break;
+            case R.id.load_chocolate_inview:
+                break;
+            case R.id.load_mopub_rewarded:
+                mopubAds.loadRewardedAd();
+                break;
+            case R.id.load_mopub_inview:
+                break;
+            default:
+                break;
+        }
     }
 }
