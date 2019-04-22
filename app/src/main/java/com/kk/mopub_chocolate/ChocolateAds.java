@@ -24,6 +24,7 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
 
     private LVDORewardedAd rewardedAd;
     private LVDOAdRequest adRequest;
+    private LVDOBannerAd bannerAd;
 
     ChocolateAds(Context context, TextView logView, ViewGroup inviewParent) {
         super(context, logView, inviewParent);
@@ -45,10 +46,9 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
     void loadBannerAd() {
         ChocolatePartners.choosePartners(ChocolatePartners.INVIEW, context, (dialog, which) -> {
             ChocolatePartners.setInviewPartners(adRequest);
-            LVDOBannerAd bannerAd = new LVDOBannerAd(context,
-                    LVDOAdSize.IAB_MRECT,
-                    Config.CHOCOLATE_API_KEY,
-                    ChocolateAds.this);
+            if (bannerAd == null) {
+                bannerAd = new LVDOBannerAd(context, LVDOAdSize.IAB_MRECT, Config.CHOCOLATE_API_KEY,ChocolateAds.this);
+            }
             bannerAd.loadAd(adRequest);
         });
     }
@@ -79,7 +79,7 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
 
     @Override
     public void onRewardedVideoShown(LVDORewardedAd lvdoRewardedAd) {
-        log(TAG + "onRewardedVideoShown: " + lvdoRewardedAd.getWinningPartnerName());
+        log(TAG + "onRewardedVideoShown.  winner: " + lvdoRewardedAd.getWinningPartnerName());
     }
 
     @Override
@@ -89,33 +89,33 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
 
     @Override
     public void onRewardedVideoDismissed(LVDORewardedAd lvdoRewardedAd) {
-        log(TAG + "onRewardedVideoDismissed: " + lvdoRewardedAd.getWinningPartnerName());
+        log(TAG + "onRewardedVideoDismissed. winner: " + lvdoRewardedAd.getWinningPartnerName());
     }
 
     @Override
     public void onRewardedVideoCompleted(LVDORewardedAd lvdoRewardedAd) {
-        log(TAG + "onRewardedVideoCompleted: " + lvdoRewardedAd.getWinningPartnerName());
+        log(TAG + "onRewardedVideoCompleted. winner: " + lvdoRewardedAd.getWinningPartnerName());
     }
 
     @Override
     public void onBannerAdLoaded(View view) {
-        log(TAG + "onBannerAdLoaded.  view: " + view);
+        log(TAG + "onBannerAdLoaded. winner: " + bannerAd.getWinningPartnerName());
         inviewParent.removeAllViews();
         inviewParent.addView(view);
     }
 
     @Override
     public void onBannerAdFailed(View view, LVDOConstants.LVDOErrorCode lvdoErrorCode) {
-        log(TAG + "onBannerAdLoaded.  error: "+lvdoErrorCode);
+        log(TAG + "onBannerAdLoaded. error: "+lvdoErrorCode);
     }
 
     @Override
     public void onBannerAdClicked(View view) {
-        log(TAG + "onBannerAdClicked.");
+        log(TAG + "onBannerAdClicked. winner: " + bannerAd.getWinningPartnerName());
     }
 
     @Override
     public void onBannerAdClosed(View view) {
-        log(TAG + "onBannerAdClosed.");
+        log(TAG + "onBannerAdClosed. winner: " + bannerAd.getWinningPartnerName());
     }
 }

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 chocolateAds.loadChocolateRewarded();
                 break;
             case R.id.load_chocolate_inview:
+                chocolateAds.loadBannerAd();
                 break;
             case R.id.load_mopub_rewarded:
                 mopubAds.loadMoPubRewardedAd();
