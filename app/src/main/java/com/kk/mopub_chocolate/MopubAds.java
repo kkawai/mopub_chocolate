@@ -94,7 +94,7 @@ class MopubAds extends BaseAds implements MoPubNative.MoPubNativeNetworkListener
         }
     };
 
-    void loadMoPubRewardedAd() {
+    void loadRewardedAd() {
         MoPubRewardedVideos.setRewardedVideoListener(rewardedVideoListener);
         if (MoPubRewardedVideos.hasRewardedVideo(Config.MOPUB_REWARDED_AD_UNIT_ID)) {
             MoPubRewardedVideos.showRewardedVideo(Config.MOPUB_REWARDED_AD_UNIT_ID);
@@ -103,7 +103,7 @@ class MopubAds extends BaseAds implements MoPubNative.MoPubNativeNetworkListener
         }
     }
 
-    void loadNativeAd() {
+    void loadInviewAd() {
         String adID = Config.MOPUB_INVIEW_AD_UNIT_ID;
         VdopiaLogger.d(TAG, "showNativeAd. ad id: " + adID);
         moPubNative = new MoPubNative(context, adID, this);

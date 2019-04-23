@@ -43,7 +43,7 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
         });
     }
 
-    void loadBannerAd() {
+    void loadInviewAd() {
         ChocolatePartners.choosePartners(ChocolatePartners.INVIEW, context, (dialog, which) -> {
             ChocolatePartners.setInviewPartners(adRequest);
             if (bannerAd == null) {
@@ -53,7 +53,7 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
         });
     }
 
-    void loadChocolateRewarded() {
+    void loadRewardedAd() {
         ChocolatePartners.choosePartners(ChocolatePartners.REWARDED, context, (dialog, which) -> {
             ChocolatePartners.setRewardedPartners(adRequest);
             if (rewardedAd == null) {

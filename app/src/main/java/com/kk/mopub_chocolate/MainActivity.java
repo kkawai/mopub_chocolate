@@ -26,16 +26,16 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonClicked(View view) {
         switch (view.getId()) {
             case R.id.load_chocolate_rewarded:
-                chocolateAds.loadChocolateRewarded();
+                chocolateAds.loadRewardedAd();
                 break;
             case R.id.load_chocolate_inview:
-                chocolateAds.loadBannerAd();
+                chocolateAds.loadInviewAd();
                 break;
             case R.id.load_mopub_rewarded:
-                mopubAds.loadMoPubRewardedAd();
+                mopubAds.loadRewardedAd();
                 break;
             case R.id.load_mopub_inview:
-                mopubAds.loadNativeAd();
+                mopubAds.loadInviewAd();
                 break;
             default:
                 break;
