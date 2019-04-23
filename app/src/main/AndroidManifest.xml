@@ -50,9 +50,16 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+        <!--
+        /*
+        * In order for Chocolate and Mopub to both use admob, we must use
+        * google ads version 16.0.0, not 17.2.0 since the later requires a
+        * hard-coded app id in the manifest.
+        */
+        -->
+        <!--<meta-data-->
+            <!--android:name="com.google.android.gms.ads.APPLICATION_ID"-->
+            <!--android:value="ca-app-pub-3940256099942544~3347511713"/>-->
 
     </application>
 
