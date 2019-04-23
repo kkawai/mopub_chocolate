@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 mopubAds.loadMoPubRewardedAd();
                 break;
             case R.id.load_mopub_inview:
+                mopubAds.loadNativeAd();
                 break;
             default:
                 break;

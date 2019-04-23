@@ -32,7 +32,7 @@ public class ChocolatePartners {
         interstitial_partners[0] = LVDOConstants.PARTNER.AMAZON.name();
         interstitial_partners[1] = LVDOConstants.PARTNER.ADCOLONY.name();
         interstitial_partners[2] = LVDOConstants.PARTNER.APPLOVIN.name();
-        interstitial_partners[3] = LVDOConstants.PARTNER.BAIDU.name();
+        interstitial_partners[3] = LVDOConstants.PARTNER.CRITEO.name();
         interstitial_partners[4] = LVDOConstants.PARTNER.CHOCOLATE.name();
         interstitial_partners[5] = LVDOConstants.PARTNER.FACEBOOK.name();
         interstitial_partners[6] = LVDOConstants.PARTNER.GOOGLEADMOB.name();
@@ -72,7 +72,7 @@ public class ChocolatePartners {
         rewarded_partners[0] = LVDOConstants.PARTNER.AMAZON.name();
         rewarded_partners[1] = LVDOConstants.PARTNER.ADCOLONY.name();
         rewarded_partners[2] = LVDOConstants.PARTNER.APPLOVIN.name();
-        rewarded_partners[3] = LVDOConstants.PARTNER.BAIDU.name();
+        rewarded_partners[3] = LVDOConstants.PARTNER.CRITEO.name();
         rewarded_partners[4] = LVDOConstants.PARTNER.CHOCOLATE.name();
         rewarded_partners[5] = LVDOConstants.PARTNER.FACEBOOK.name();
         rewarded_partners[6] = LVDOConstants.PARTNER.GOOGLEADMOB.name();
@@ -111,7 +111,7 @@ public class ChocolatePartners {
         inview_partners[0] = LVDOConstants.PARTNER.AMAZON.name();
         inview_partners[1] = LVDOConstants.PARTNER.ADCOLONY.name();
         inview_partners[2] = LVDOConstants.PARTNER.APPLOVIN.name();
-        inview_partners[3] = LVDOConstants.PARTNER.BAIDU.name();
+        inview_partners[3] = LVDOConstants.PARTNER.CRITEO.name();
         inview_partners[4] = LVDOConstants.PARTNER.CHOCOLATE.name();
         inview_partners[5] = LVDOConstants.PARTNER.FACEBOOK.name();
         inview_partners[6] = LVDOConstants.PARTNER.GOOGLEADMOB.name();

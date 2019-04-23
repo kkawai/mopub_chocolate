@@ -38,7 +38,7 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
 
             @Override
             public void onError(String msg) {
-
+                log("Chocolate not initialized");
             }
         });
     }
@@ -75,6 +75,7 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
     @Override
     public void onRewardedVideoFailed(LVDORewardedAd lvdoRewardedAd, LVDOConstants.LVDOErrorCode lvdoErrorCode) {
         log(TAG + "onRewardedVideoFailed. errorCode: " + lvdoErrorCode);
+        toast("Rewarded Ad: " + lvdoErrorCode);
     }
 
     @Override
