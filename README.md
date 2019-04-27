@@ -13,7 +13,9 @@ https://chocolateplatform.com/sdk-documentation/?frame_ad_units=android
 
 Also uses the latest Mopub SDK.
 
-The magic is in app/build.gradle
+The magic is in app/build.gradle:
+
+https://github.com/kkawai/mopub_chocolate/blob/master/app/build.gradle
 
 <img src="Screenshot_20190423-154412.png">
 <br/>
