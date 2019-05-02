@@ -2,21 +2,23 @@ package com.kk.mopub_chocolate;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.adcolony.sdk.AdColony;
+import com.adcolony.sdk.AdColonyAppOptions;
+import com.amazon.device.ads.AdRegistration;
 import com.vdopia.ads.lw.Chocolate;
 import com.vdopia.ads.lw.InitCallback;
 import com.vdopia.ads.lw.LVDOAdRequest;
 import com.vdopia.ads.lw.LVDOAdSize;
 import com.vdopia.ads.lw.LVDOBannerAd;
 import com.vdopia.ads.lw.LVDOBannerAdListener;
-import com.vdopia.ads.lw.LVDOBannerPartnerHelper;
 import com.vdopia.ads.lw.LVDOConstants;
 import com.vdopia.ads.lw.LVDORewardedAd;
 import com.vdopia.ads.lw.RewardedAdListener;
+import com.vdopia.ads.lw.VdopiaLogger;
 
 class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdListener {
 
@@ -29,7 +31,12 @@ class ChocolateAds extends BaseAds implements RewardedAdListener, LVDOBannerAdLi
     ChocolateAds(Context context, TextView logView, ViewGroup inviewParent) {
         super(context, logView, inviewParent);
         adRequest = new LVDOAdRequest(context);
+        VdopiaLogger.enable(true);
+        AdColonyAppOptions adColonyAppOptions = new AdColonyAppOptions();
+        adColonyAppOptions.setTestModeEnabled(true);
+        AdColony.setAppOptions(adColonyAppOptions); //AdColony test mode
         Chocolate.enableChocolateTestAds(true);
+        AdRegistration.enableTesting(true); //amazon test mode
         Chocolate.init((Activity)context, Config.CHOCOLATE_API_KEY, new InitCallback() {
             @Override
             public void onSuccess() {
