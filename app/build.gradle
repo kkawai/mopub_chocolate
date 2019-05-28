@@ -51,12 +51,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //CHOCOLATE MEDIATION ADAPTERS AND LIBRARIES
-    implementation 'com.vdopia.ads.lw:coresdk:2.8.0'
+    implementation 'com.vdopia.ads.lw:coresdk:2.8.4'
     implementation 'com.vdopia.ads.lw:adcolony-adapter:3.3.10'
     implementation 'com.vdopia.ads.lw:amazon-adapter:1.0.2'
     implementation 'com.amazon.android:mobile-ads:5.+'
     implementation 'com.vdopia.ads.lw:applovin-adapter:9.4.2'
-    implementation 'com.vdopia.ads.lw:google-adapter:16.0.0'
+    implementation 'com.vdopia.ads.lw:google-adapter:16.0.0.a'
     implementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
     implementation 'com.vdopia.ads.lw:criteo-adapter:1.5.5.a'
@@ -65,7 +65,7 @@ dependencies {
     implementation 'com.vdopia.ads.lw:mopub-adapter:5.6.0'
     implementation 'com.vdopia.ads.lw:tapjoy-adapter:12.2.1'
     implementation 'com.vdopia.ads.lw:unity-adapter:3.0.3'
-    implementation 'com.vdopia.ads.lw:vungle-adapter:1.0.8'
+    implementation 'com.vdopia.ads.lw:vungle-adapter:6.3.24'
     implementation 'com.vdopia.ads.lw:yahoo-adapter:1.0.8'
     implementation 'com.vdopia.ads.lw:video-player:4.3.2'
 
